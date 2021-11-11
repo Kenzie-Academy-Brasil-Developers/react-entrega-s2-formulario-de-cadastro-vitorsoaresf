@@ -1,10 +1,11 @@
+import { ContainerRoutes } from "./styles";
 import { Switch, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 
 function Routes() {
   return (
-    <div>
+    <ContainerRoutes>
       <Switch>
         <Route exact path="/">
           <Home />
@@ -13,7 +14,7 @@ function Routes() {
           <Login />
         </Route>
       </Switch>
-    </div>
+    </ContainerRoutes>
   );
 }
 

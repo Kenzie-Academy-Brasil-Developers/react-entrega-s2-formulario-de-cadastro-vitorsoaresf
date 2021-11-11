@@ -1,12 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
     body{
         margin: 0;
         padding: 0;
         background: #a29bfe;
         font-family: Arial, Helvetica, sans-serif;
+        /* display:flex;
+        align-items: center;
+        justify-content: center; */
     }
 `;
-
-export default GlobalStyle;
