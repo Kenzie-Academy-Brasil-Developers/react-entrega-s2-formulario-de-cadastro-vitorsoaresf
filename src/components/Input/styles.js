@@ -9,10 +9,13 @@ export const ContainerInput = styled.input`
   font-size: 1rem;
   margin-top: 5px;
   box-shadow: ${(props) => (props.error ? "0 0 0.5em red" : "unset")};
+  font-family: "Roboto", sans-serif;
+  color: rgb(0, 0, 0, 0.5);
 
   ::placeholder {
     color: #dbdbdb;
   }
+
   :focus {
     outline: unset;
     border: 1px solid #d170af;
@@ -30,10 +33,6 @@ export const ContainerCheckBox = styled.input`
   height: 20px;
   width: 20px;
   box-shadow: ${(props) => (props.error ? "0 0 0.5em red" : "unset")};
-
-  :checked {
-    background-color: blue;
-  }
 `;
 
 export const Container = styled.div`
@@ -45,13 +44,15 @@ export const Container = styled.div`
     font-size: 0.6rem;
     color: red;
   }
+
   span {
     margin-top: 20px;
-    color: black;
+    color: rgb(0, 0, 0, 0.5);
   }
 
   label {
     font-size: 0.9rem;
+    color: rgb(0, 0, 0, 0.5);
   }
 
   div {

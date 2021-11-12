@@ -10,11 +10,16 @@ export const ContainerButton = styled.button`
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 540px;
+  margin-top: 500px;
   position: absolute;
+  transition: background-color 1s;
 
   :hover {
-    background-color: #6c62fc;
+    background-color: #c67590;
     color: white;
+  }
+
+  @media (min-width: 768px) {
+    width: 410px;
   }
 `;

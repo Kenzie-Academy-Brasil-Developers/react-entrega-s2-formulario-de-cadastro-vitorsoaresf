@@ -4,7 +4,10 @@ import { ContainerHome } from "./styles";
 function Home() {
   return (
     <ContainerHome>
-      <section>a</section>
+      <section>
+        <h2>Welcome</h2>
+        <p>to the flowers</p>
+      </section>
       <Form />
     </ContainerHome>
   );
