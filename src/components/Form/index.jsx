@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useHistory } from "react-router";
 import Input from "../Input";
 import Button from "../Button";
+import toast from "react-hot-toast";
 
 function Form() {
   const history = useHistory();
@@ -13,7 +14,10 @@ function Form() {
     email: yup.string().required("E-mail obrigatório").email("E-mail inválido"),
     name: yup.string().required("Nome obrigatório"),
     password: yup.string().required("Senha obrigatório"),
-    confirm_password: yup.string().required("Confirmação de senha obrigatória"),
+    confirm_password: yup
+      .string()
+      .oneOf([yup.ref("password"), null], "")
+      .required("Confirmação de senha obrigatória"),
     accept_terms: yup.boolean().oneOf([true], "you accept the terms of use?"),
   });
 
