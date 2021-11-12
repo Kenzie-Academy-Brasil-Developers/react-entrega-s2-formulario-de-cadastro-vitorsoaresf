@@ -1,11 +1,14 @@
 import Button from "../../components/Button";
 import { useHistory } from "react-router";
+import { useParams } from "react-router-dom";
+
 function Login() {
   const history = useHistory();
+  const { name } = useParams();
 
   return (
     <>
-      <div>Login</div>;
+      <div>Login: {name} </div>;
       <Button value="VOLTAR" onClick={() => history.push("/")} />
     </>
   );
