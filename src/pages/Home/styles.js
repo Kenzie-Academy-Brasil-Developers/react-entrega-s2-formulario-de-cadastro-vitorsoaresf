@@ -26,6 +26,8 @@ export const ContainerHome = styled.div`
       background-color: rgb(247, 143, 179, 0.5);
       color: white;
       font-family: "Dancing Script", cursive;
+      animation-name: leftSection;
+      animation-duration: 3s;
 
       h2 {
         border-radius: 5px;
@@ -49,6 +51,16 @@ export const ContainerHome = styled.div`
   @media (min-width: 1400px) {
     section {
       width: 500px;
+    }
+  }
+
+  @keyframes leftSection {
+    0% {
+      margin-left: -500px;
+    }
+
+    100% {
+      margin-left: 0;
     }
   }
 `;
