@@ -10,7 +10,7 @@ export const ContainerRoutes = styled.div`
   background-size: cover;
 
   @media (min-width: 768px) {
-    height: 100vh;
+    height: 120vh;
   }
   @media (min-width: 1024px) {
     height: 100vh;
