@@ -6,8 +6,8 @@ export const ContainerInput = styled.input`
   background-color: unset;
   height: 50px;
   width: 200px;
-  margin: 20px 0;
   font-size: 1rem;
+  margin-top: 20px;
   color: white;
 
   ::placeholder {
@@ -15,5 +15,14 @@ export const ContainerInput = styled.input`
   }
   :focus {
     outline-color: white;
+  }
+`;
+
+export const Container = styled.div`
+  color: red;
+
+  p {
+    height: 10px;
+    font-size: 0.6rem;
   }
 `;

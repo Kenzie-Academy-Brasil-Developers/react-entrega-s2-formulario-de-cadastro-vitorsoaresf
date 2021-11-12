@@ -10,7 +10,7 @@ function Routes() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/login">
+        <Route exact path="/login/:name">
           <Login />
         </Route>
       </Switch>

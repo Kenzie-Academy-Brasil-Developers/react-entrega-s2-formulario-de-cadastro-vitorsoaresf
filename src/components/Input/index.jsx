@@ -1,7 +1,17 @@
-import { ContainerInput } from "./styles";
+import { ContainerInput, Container } from "./styles";
 
-function Input({ placeholder, register }) {
-  return <ContainerInput placeholder={placeholder} />;
+function Input({ type, placeholder, register, name, error }) {
+  // console.log(error);
+  return (
+    <Container>
+      <ContainerInput
+        {...register(name)}
+        type={type}
+        placeholder={placeholder}
+      />
+      {error && <p>{error} </p>}
+    </Container>
+  );
 }
 
 export default Input;

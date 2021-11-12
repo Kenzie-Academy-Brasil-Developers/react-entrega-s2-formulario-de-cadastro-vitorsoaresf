@@ -6,8 +6,5 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         background: #a29bfe;
         font-family: Arial, Helvetica, sans-serif;
-        /* display:flex;
-        align-items: center;
-        justify-content: center; */
     }
 `;
