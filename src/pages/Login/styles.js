@@ -103,14 +103,14 @@ export const ContainerLogin = styled.div`
     background-image: url(${img});
     background-size: cover;
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
 
     div {
-      width: 500px;
-      height: 500px;
+      width: 400px;
+      height: 400px;
     }
 
     h1 {
@@ -124,5 +124,9 @@ export const ContainerLogin = styled.div`
       height: 50px;
       width: 210px;
     }
+  }
+
+  @media (min-width: 1024px) {
+    height: 120vh;
   }
 `;
