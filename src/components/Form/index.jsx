@@ -14,6 +14,7 @@ function Form() {
     name: yup.string().required("Nome obrigatório"),
     password: yup.string().required("Senha obrigatório"),
     confirm_password: yup.string().required("Confirmação de senha obrigatória"),
+    accept_terms: yup.boolean().oneOf([true], "you accept the terms of use?"),
   });
 
   const {
@@ -31,43 +32,51 @@ function Form() {
 
   return (
     <ContainerForm onSubmit={handleSubmit(onSubmitFunction)}>
+      <h1>Register account</h1>
+
       <Input
         type="text"
-        placeholder=" Nome"
+        placeholder="Usersame"
         register={register}
-        // {...register("name")}
         name="name"
         error={errors.name?.message}
       />
-      {/* {errors.name?.message} */}
+
       <Input
         type="email"
-        placeholder=" Email"
+        placeholder="Email"
         register={register}
         name="email"
-        // {...register("email")}
         error={errors.email?.message}
       />
-      {/* {errors.email?.message} */}
+
       <Input
         type="password"
-        placeholder=" Senha"
+        placeholder="Password"
         register={register}
         name="password"
-        // {...register("password")}
         error={errors.password?.message}
       />
-      {/* {errors.password?.message} */}
+
       <Input
         type="password"
-        placeholder=" Confirmar Senha"
+        placeholder="Confirm Password"
         register={register}
         name="confirm_password"
-        // {...register("confirm_password")}
         error={errors.confirm_password?.message}
       />
-      {/* {errors.confirm_password?.message} */}
-      <Button type="submit" value="CADASTRAR" />
+
+      <div className="container__checkbox">
+        <Input
+          type="checkbox"
+          name="accept"
+          register={register}
+          name="accept_terms"
+          error={errors.accept_terms?.message}
+          message="I accept the terms of use"
+        />
+      </div>
+      <Button type="submit" value="Create Account" />
     </ContainerForm>
   );
 }

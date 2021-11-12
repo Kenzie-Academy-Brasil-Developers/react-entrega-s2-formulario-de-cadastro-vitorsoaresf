@@ -1,15 +1,22 @@
-import { ContainerInput, Container } from "./styles";
+import { ContainerCheckBox, ContainerInput, Container } from "./styles";
 
-function Input({ type, placeholder, register, name, error }) {
-  // console.log(error);
+function Input({ type, placeholder, register, name, error, message }) {
   return (
     <Container>
-      <ContainerInput
-        {...register(name)}
-        type={type}
-        placeholder={placeholder}
-      />
-      {error && <p>{error} </p>}
+      <span>{placeholder}</span>
+      {type === "checkbox" ? (
+        <div>
+          <ContainerCheckBox
+            id={name}
+            {...register(name)}
+            type={type}
+            error={error}
+          />
+          <label htmlFor={name}>{message}</label>
+        </div>
+      ) : (
+        <ContainerInput {...register(name)} type={type} error={error} />
+      )}
     </Container>
   );
 }
