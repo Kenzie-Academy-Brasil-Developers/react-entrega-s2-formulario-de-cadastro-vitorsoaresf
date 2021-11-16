@@ -17,6 +17,8 @@ function Input({ type, placeholder, register, name, error, message }) {
       ) : (
         <ContainerInput {...register(name)} type={type} error={error} />
       )}
+
+      {error && <p>{error}</p>}
     </Container>
   );
 }

@@ -11,13 +11,22 @@ function Form() {
   const history = useHistory();
 
   const formSchema = yup.object().shape({
-    email: yup.string().required("E-mail obrigatório").email("E-mail inválido"),
-    name: yup.string().required("Nome obrigatório"),
-    password: yup.string().required("Senha obrigatório"),
+    email: yup.string().required("Required email").email("Invalid E-mail"),
+    name: yup
+      .string()
+      .required("")
+      .matches(/^[a-zA-Z]+$/gi, "name with only letters"),
+    password: yup
+      .string()
+      .required("Required password")
+      .matches(
+        /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&,]{8,}$/,
+        "Ex: Abcdef!8"
+      ),
     confirm_password: yup
       .string()
       .oneOf([yup.ref("password"), null], "")
-      .required("Confirmação de senha obrigatória"),
+      .required("Required confirm password"),
     accept_terms: yup.boolean().oneOf([true], "you accept the terms of use?"),
   });
 

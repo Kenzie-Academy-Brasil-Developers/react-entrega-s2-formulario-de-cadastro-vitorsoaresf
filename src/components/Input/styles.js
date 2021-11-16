@@ -13,7 +13,7 @@ export const ContainerInput = styled.input`
   color: rgb(0, 0, 0, 0.5);
 
   ::placeholder {
-    color: #dbdbdb;
+    color: #9b9b9b;
   }
 
   :focus {
@@ -40,6 +40,8 @@ export const Container = styled.div`
   flex-direction: column;
 
   p {
+    position: absolute;
+    margin-top: 90px;
     height: 10px;
     font-size: 0.6rem;
     color: red;
