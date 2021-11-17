@@ -15,7 +15,7 @@ function Form() {
     name: yup
       .string()
       .required("")
-      .matches(/^[a-zA-Z][\w ]+$/i, "name with only letters"),
+      .matches(/^[a-zA-Z]+$/i, "name with only letters"),
     password: yup
       .string()
       .required("Required password")
